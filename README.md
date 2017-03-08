@@ -7,7 +7,7 @@ las personas que agendan citas son de 2 areas
 ******** Modelos y relaciones del sistema ******
 
 
-*modelo Agentellamada
+*modelo Agentellamada(subadministrador)
 
 	tiene muchos comentarios que pertenecen a un paciente
 	tiene muchas citas que pertenecen a un doctor paciente
@@ -18,20 +18,19 @@ las personas que agendan citas son de 2 areas
 *modelo paciente
 
 	muchas citas
-	pertenece a unn doctor
+	pertenece a un doctor
+	pertenece agentellamada
 
-
-
-	-namlastname -age -email -phone  -address
+	-name -lastname -age -email -phone  -address
 
 
 *modelo Comentario
-	pertenAgeeelnadatlamant
+	pertenece a un Agentellamada
 
 
 
 
-*moelo doctor
+*modelo doctor
 	muchos pacientes atraves de citas
 
 	nombre especialidad
