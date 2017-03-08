@@ -1,24 +1,53 @@
-# README
+las personas que agendan citas son de 2 areas
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1-. Call center (comun)**********
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+******** Modelos y relaciones del sistema ******
 
-* Configuration
 
-* Database creation
+*modelo Agentellamada
 
-* Database initialization
+	tiene muchos comentarios que pertenecen a un paciente
+	tiene muchas citas que pertenecen a un doctor paciente
 
-* How to run the test suite
+	name email
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+*modelo paciente
 
-* ...
+	muchas citas
+	pertenece a unn doctor
+
+
+
+	-namlastname -age -email -phone  -address
+
+
+*modelo Comentario
+	pertenAgeeelnadatlamant
+
+
+
+
+*moelo doctor
+	muchos pacientes atraves de citas
+
+	nombre especialidad
+
+
+*modelo cita
+	 pertenece a un paciente
+	 pertenece a un doctor
+
+	 day hour
+
+
+<!-- *modelo usuario
+	tiene muchos doctores
+	tiene muchos pacientes
+	tiene muchas citas
+	 -->
+
+*modelo Calendario
