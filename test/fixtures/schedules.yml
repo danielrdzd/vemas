@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  day: 2017-03-08 22:54:12
+  doctor: one
+  patient: one
+  receptionist: one
+  comment: one
+
+two:
+  day: 2017-03-08 22:54:12
+  doctor: two
+  patient: two
+  receptionist: two
+  comment: two

@@ -1,55 +1,57 @@
-las personas que agendan citas son de 2 areas
-
-1-. Call center (comun)**********
-
-
-
 ******** Modelos y relaciones del sistema ******
 
 
-*modelo Agentellamada(subadministrador)
-	
-	tiene muchos comentarios que pertenecen a un paciente
-	tiene muchas citas que pertenecen a un doctor paciente
+*modelo receptionist
+	has_many comment, through: schedules
 
-	name email
+	 name:string
+	 email:string
+
+<!-- *********************No Vistas ************************* -->
+*modelo patient
+
+	has_many :schedules
+	has_many :doctors
+	has_many :receptionists
+
+	 -name:string
+	 -last_name:string
+	 -age:integer
+	 -email:string
+	 -phone: string
+	 -address:string
+	 -sex:boolean
+
+*modelo Comment
+	has_many receptionists
+	has_many schedules, through: comment
+
+	title:string
+	content:text
 
 
-*modelo paciente
-
-	muchas citas
-	pertenece a un doctor
-	pertenece agentellamada
-
-	-name -lastname -age -email -phone  -address 
-
-
-*modelo Comentario
-	pertenece a un Agentellamada
-
-
-
-
+<!-- ********************* No Vistas ******************************** -->
 *modelo doctor
-	muchos pacientes atraves de citas
+	has_many patients, through: :appointments
+	has_many appointments
 
-	nombre especialidad 
-	
-
-*modelo cita
-	 pertenece a un paciente
-	 pertenece a un doctor
-
-	 day hour
+	name:string
+  physician:string
 
 
-<!-- *modelo usuario
-	tiene muchos doctores
-	tiene muchos pacientes
-	tiene muchas citas
-	 -->
+*modelo schedule
+	doctor_id
+	patient_id
+	receptionist_id
+	comment_id
 
+	has_many :patients
+	has_many :doctors
+	has_many :receptionist
+
+
+	 day:datetime
+
+
+<!-- **************************Pendiente***************************** -->
 *modelo Calendario
-
-
-

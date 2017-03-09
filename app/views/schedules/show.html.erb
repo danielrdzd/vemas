@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @schedule.day %>
+</p>
+
+<p>
+  <strong>Doctor:</strong>
+  <%= @schedule.doctor %>
+</p>
+
+<p>
+  <strong>Patient:</strong>
+  <%= @schedule.patient %>
+</p>
+
+<p>
+  <strong>Receptionist:</strong>
+  <%= @schedule.receptionist %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @schedule.comment %>
+</p>
+
+<%= link_to 'Edit', edit_schedule_path(@schedule) %> |
+<%= link_to 'Back', schedules_path %>
